@@ -1,0 +1,60 @@
+      APTITUDE
+	-----------------------
+
+	1 NUMBER SYSTEM
+	2 SQUARE AND CUBE NUMBERS
+	3 DIVISIBILITY TEST
+	4 LCM AND HCF
+ 
+	..........................
+
+	5 RATIO AND PROPORTION              
+	6 AGES                              
+	7 PARTNERSHIP                      
+	8 AVERAGE
+	9 TIME AND WORK
+	10 PIPES AND CISTERN
+	11 WORK AND WAGES
+
+	FIRST MOCK
+	..........................
+
+	12 PERCENTAGE                         
+	13 PROFIT AND LOSS        
+	14 SIMPLE INTEREST                
+	15 COMPOUND INTEREST
+	16 DATA INTERPRETATION
+
+	.........................
+
+	17 TIME SPEED DISTANCE             
+	18 PROBLEMS ON TRAINS
+	19 BOATS AND STREAMS
+	........................
+	20 AREA AND PERIMETER                 
+	21 VOLUMES AND SURFACE AREA   
+	22 PERMUTATION AND COMBINATION
+	23 PROBABILITY     
+	24 DATA SUFFICIENCY      
+
+	2nd MOCK
+	...............................
+	REASONING
+	--------------------------------
+	1 CODED AND DECODE
+	2 NUMBER SERIES
+	3 DIRECTION
+	4 BLOOD RELATION
+	5 SYLLOGISM
+	6 GAMING APTITUDE
+	7 RANKING
+	8 CALENDER
+	9 CLOCK
+	10 SEATING ARRANGEMENT AND PUZZLES
+	11 Inequality
+	12 VISUAL REASONING
+	13 CRTICAL THINKING
+
+
+
+
