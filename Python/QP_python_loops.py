@@ -18,7 +18,7 @@
 
 # write a program to reverse a given integar without using typrcasting and slicing ?
 
-# Wr*ite a program to print following output "Hey_How_Are_You" ?
+# Write a program to print following output "Hey_How_Are_You" ?
 
 # Write a program to extract all the special character to given string ?
 
