@@ -36,13 +36,3 @@
 
 ##o/p = {'Program','Program','ABC','ABC'}
 
-l = [1,2,3,'Python','ABC',3+2j]
-output = set()
-
-for i in l:
-    for j in l:
-        if isinstance(j, str):
-            output.add(j)
-
-print(output)
-
