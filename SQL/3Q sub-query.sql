@@ -1,7 +1,7 @@
 
 # Question 1
 SELECT * 
-FROM epm 
+FROM emp 
 WHERE dname 
 LIKE '%S';
 
@@ -9,15 +9,15 @@ LIKE '%S';
 SELECT ename 
 FROM emp 
 WHERE sal = (SELECT MAX(sal) 
-                FROM emp 
-                WHERE dname = 'ACCOUNTING') 
+            FROM emp 
+            WHERE dname = 'ACCOUNTING') 
 AND dname = 'ACCOUNTING';
 
 # Question 3
-SELECT department_name 
-FROM employees 
-WHERE commission = (SELECT MAX(commission) 
-                    FROM employees);
+SELECT dname 
+FROM emp 
+WHERE comm = (SELECT MAX(comm) 
+                    FROM emp);
 
 # Question 4
 SELECT employee_name 
@@ -221,13 +221,19 @@ AND salary > (SELECT salary
 # Question 31
 SELECT location
 FROM employees
-WHERE manager_id = (SELECT employee_id FROM employees WHERE employee_name = 'Blake');
+WHERE manager_id = (SELECT employee_id 
+                    FROM employees 
+                    WHERE employee_name = 'Blake');
 
 # Question 32
 SELECT *
 FROM employees
-WHERE job = (SELECT job FROM employees WHERE employee_name = 'Jones')
-AND salary < (SELECT salary FROM employees WHERE employee_name = 'Scott');
+WHERE job = (SELECT job 
+             FROM employees 
+             WHERE employee_name = 'Jones')
+AND salary < (SELECT salary 
+              FROM employees 
+              WHERE employee_name = 'Scott');
 
 # Question 33
 SELECT employee_name, department_name, salary_12 AS annual_salary
@@ -239,12 +245,15 @@ HAVING COUNT(_) >= 3;
 # Question 34
 SELECT *
 FROM employees
-WHERE salary < (SELECT MIN(salary) FROM employees WHERE job = 'SALESMAN');
+WHERE salary < (SELECT MIN(salary) 
+                FROM employees 
+                WHERE job = 'SALESMAN');
 
 # Question 35
 SELECT *
 FROM employees
-WHERE hire_date < (SELECT MAX(hire_date) FROM employees);
+WHERE hire_date < (SELECT MAX(hire_date) 
+                   FROM employees);
 
 # Question 36
 SELECT DISTINCT salary
@@ -255,13 +264,18 @@ LIMIT 1 OFFSET 2;
 # Question 37
 SELECT *
 FROM employees
-WHERE salary > (SELECT MAX(salary) FROM employees WHERE job = 'MANAGER');
+WHERE salary > (SELECT MAX(salary) 
+                FROM employees 
+                WHERE job = 'MANAGER');
 
 # Question 38
 SELECT *
 FROM employees
-WHERE hire_date > (SELECT MIN(hire_date) + INTERVAL 4 YEAR FROM employees)
-AND salary < (SELECT salary FROM employees WHERE employee_name = 'Blake');
+WHERE hire_date > (SELECT MIN(hire_date) + INTERVAL 4 YEAR 
+                   FROM employees)
+AND salary < (SELECT salary 
+              FROM employees 
+              WHERE employee_name = 'Blake');
 
 # Question 39
 SELECT department_name
@@ -277,12 +291,18 @@ AND salary BETWEEN 1000 AND 3000;
 # Question 41
 SELECT department_name
 FROM employees
-WHERE manager_id = (SELECT employee_id FROM employees WHERE employee_name = 'Blake');
+WHERE manager_id = (SELECT employee_id 
+                    FROM employees 
+                    WHERE employee_name = 'Blake');
 
 # Question 42
 SELECT department_name, location
 FROM employees
-WHERE employee_id = (SELECT manager_id FROM employees WHERE employee_id = (SELECT manager_id FROM employees WHERE employee_name = 'Martin'));
+WHERE employee_id = (SELECT manager_id 
+                     FROM employees 
+                     WHERE employee_id = (SELECT manager_id 
+                                          FROM employees 
+                                          WHERE employee_name = 'Martin'));
 
 # Question 43
 SELECT manager_id, job, department_id
@@ -293,30 +313,39 @@ AND location IN ('Chicago', 'Dallas');
 # Question 44
 SELECT _, salary_12 AS annual_salary
 FROM employees
-WHERE commission = (SELECT MAX(commission) FROM employees);
+WHERE commission = (SELECT MAX(commission) 
+                    FROM employees);
 
 # Question 45
 SELECT *
 FROM employees
 WHERE department_name = 'Sales'
 AND commission > 0
-AND hire_date < (SELECT MAX(hire_date) FROM employees);
+AND hire_date < (SELECT MAX(hire_date) 
+                 FROM employees);
 
 # Question 46
 SELECT department_name
 FROM employees
-WHERE employee_id = (SELECT manager_id FROM employees WHERE employee_id = (SELECT manager_id FROM employees WHERE employee_name = 'Ward'));
+WHERE employee_id = (SELECT manager_id 
+                     FROM employees 
+                     WHERE employee_id = (SELECT manager_id 
+                                          FROM employees 
+                                          WHERE employee_name = 'Ward'));
 
 # Question 47
 SELECT department_name
 FROM employees
-WHERE salary > (SELECT AVG(salary) FROM employees WHERE job = 'CLERK');
+WHERE salary > (SELECT AVG(salary) 
+                FROM employees 
+                WHERE job = 'CLERK');
 
 # Question 48
 SELECT _, salary_1.25 AS new_salary
 FROM employees
 ORDER BY employee_id
-LIMIT 1 OFFSET (SELECT COUNT(*) FROM employees - 1);
+LIMIT 1 OFFSET (SELECT COUNT(*) 
+                FROM employees - 1);
 
 # Question 49
 SELECT department_id
@@ -328,7 +357,9 @@ AND job = 'MANAGER';
 # Question 49
 SELECT department_name
 FROM employees
-WHERE salary = (SELECT MIN(salary) FROM employees WHERE manager_id IS NOT NULL)
+WHERE salary = (SELECT MIN(salary) 
+                FROM employees 
+                WHERE manager_id IS NOT NULL)
 AND manager_id IS NOT NULL;
 
 # Question 50
@@ -344,30 +375,39 @@ WHERE job = 'PRESIDENT';
 # Question 52
 SELECT department_name
 FROM employees
-WHERE salary = (SELECT MAX(salary) FROM employees WHERE salary < 3000)
+WHERE salary = (SELECT MAX(salary) 
+                FROM employees 
+                WHERE salary < 3000)
 AND salary < 3000;
 
 # Question 53
 SELECT department_name
 FROM employees
-WHERE manager_id = (SELECT employee_id FROM employees WHERE employee_name = 'Adams');
+WHERE manager_id = (SELECT employee_id 
+                    FROM employees 
+                    WHERE employee_name = 'Adams');
 
 # Question 54
 SELECT *
 FROM employees
 ORDER BY employee_id
-LIMIT 1 OFFSET (SELECT COUNT(*) FROM employees - 1);
+LIMIT 1 OFFSET (SELECT COUNT(*) 
+                FROM employees - 1);
 
 # Question 55
 SELECT *
 FROM employees
-WHERE salary > (SELECT AVG(salary) FROM employees WHERE department_id = 30);
+WHERE salary > (SELECT AVG(salary) 
+                FROM employees 
+                WHERE department_id = 30);
 
 # Question 56
 SELECT COUNT(*)
 FROM employees
 WHERE department_name = 'Research'
-AND salary < (SELECT MIN(salary) FROM employees WHERE department_id = 10);
+AND salary < (SELECT MIN(salary) 
+              FROM employees 
+              WHERE department_id = 10);
 
 # Question 57
 SELECT DISTINCT department_name
@@ -382,7 +422,9 @@ WHERE department_name LIKE '%L%';
 # Question 59
 SELECT *
 FROM employees
-WHERE hire_date > (SELECT hire_date FROM employees WHERE employee_name = 'Blake');
+WHERE hire_date > (SELECT hire_date 
+                   FROM employees 
+                   WHERE employee_name = 'Blake');
 
 # Question 60
 SELECT department_name
@@ -393,7 +435,9 @@ HAVING COUNT() >= 3 AND COUNT() <= 5;
 # Question 61
 SELECT location
 FROM employees
-WHERE manager_id IN (SELECT employee_id FROM employees WHERE salary > 2000);
+WHERE manager_id IN (SELECT employee_id 
+                     FROM employees 
+                     WHERE salary > 2000);
 
 # Question 62
 SELECT *
@@ -403,7 +447,9 @@ WHERE department_name LIKE '%E%E%';
 # Question 63
 SELECT employee_name, salary
 FROM employees
-WHERE salary > (SELECT MAX(salary) FROM employees WHERE job = 'ANALYST');
+WHERE salary > (SELECT MAX(salary) 
+                FROM employees 
+                WHERE job = 'ANALYST');
 
 # Question 64
 SELECT *
@@ -413,7 +459,9 @@ WHERE location = 'Chicago';
 # Question 65
 SELECT employee_name
 FROM employees
-WHERE salary = (SELECT MIN(salary) FROM employees WHERE department_name = 'Research')
+WHERE salary = (SELECT MIN(salary) 
+                FROM employees 
+                WHERE department_name = 'Research')
 AND department_name = 'Research';
 
 # Question 66
@@ -431,7 +479,9 @@ HAVING COUNT(*) >= 3;
 SELECT employee_name
 FROM employees
 WHERE department_name IN ('Research', 'Accounting')
-AND manager_id IN (SELECT employee_id FROM employees WHERE job = 'MANAGER')
+AND manager_id IN (SELECT employee_id 
+                   FROM employees 
+                   WHERE job = 'MANAGER')
 GROUP BY employee_name
 HAVING COUNT(DISTINCT manager_id) >= 2;
 
@@ -444,7 +494,12 @@ AND location = 'Chicago';
 # Question 70
 SELECT employee_name
 FROM employees
-WHERE salary = (SELECT MAX(salary) FROM employees WHERE location = 'Dallas' AND salary < (SELECT MAX(salary) FROM employees WHERE location = 'Dallas'))
+WHERE salary = (SELECT MAX(salary) 
+                FROM employees 
+                WHERE location = 'Dallas' 
+                AND salary < (SELECT MAX(salary) 
+                              FROM employees 
+                              WHERE location = 'Dallas'))
 AND location = 'Dallas';
 
 # Question 71
@@ -457,32 +512,43 @@ AND hire_date > '1983-07-31';
 SELECT employee_name
 FROM employees
 WHERE department_name IN ('Sales', 'Research')
-AND employee_id IN (SELECT manager_id FROM employees WHERE department_name IN ('Sales', 'Research'))
+AND employee_id IN (SELECT manager_id 
+                    FROM employees 
+                    WHERE department_name IN ('Sales', 'Research'))
 GROUP BY employee_name
 HAVING COUNT(DISTINCT employee_id) >= 2;
 
 # Question 73
 SELECT *
 FROM employees
-WHERE commission > (SELECT MAX(salary) FROM employees WHERE job = 'SALESMAN')
-AND manager_id <> (SELECT employee_id FROM employees WHERE employee_name = 'King');
+WHERE commission > (SELECT MAX(salary) 
+                    FROM employees 
+                    WHERE job = 'SALESMAN')
+AND manager_id <> (SELECT employee_id 
+                   FROM employees 
+                   WHERE employee_name = 'King');
 
 
 # Question 74
 SELECT location
 FROM departments
-WHERE department_id IN (SELECT department_id FROM employees WHERE EXTRACT(YEAR FROM hire_date) = 1981);
+WHERE department_id IN (SELECT department_id 
+                        FROM employees 
+                        WHERE EXTRACT(YEAR FROM hire_date) = 1981);
 
 # Question 75
 SELECT department_name, MIN(salary)
 FROM employees
 GROUP BY department_name
-HAVING MIN(salary) < (SELECT AVG(salary) FROM employees);
+HAVING MIN(salary) < (SELECT AVG(salary) 
+                      FROM employees);
 
 # Question 76
 SELECT *
 FROM employees
-WHERE manager_id = (SELECT employee_id FROM employees WHERE employee_name = 'Jones');
+WHERE manager_id = (SELECT employee_id 
+                    FROM employees 
+                    WHERE employee_name = 'Jones');
 
 # Question 77
 SELECT *
@@ -493,7 +559,9 @@ WHERE location LIKE '%O%O%';
 SELECT employee_name
 FROM employees
 WHERE department_id = 10
-AND salary > (SELECT MAX(salary) FROM employees WHERE department_id <> 10);
+AND salary > (SELECT MAX(salary) 
+              FROM employees 
+              WHERE department_id <> 10);
 
 # Question 79
 SELECT employee_name, job, MAX(salary)
@@ -504,12 +572,18 @@ GROUP BY job;
 SELECT employee_id, employee_name
 FROM employees
 WHERE job = 'CLERK'
-AND salary = (SELECT MAX(salary) FROM employees WHERE job = 'CLERK');
+AND salary = (SELECT MAX(salary) 
+              FROM employees 
+              WHERE job = 'CLERK');
 
 # Question 81
 SELECT hire_date
 FROM employees
-WHERE employee_id = (SELECT manager_id FROM employees WHERE employee_id = (SELECT manager_id FROM employees WHERE employee_name = 'Smith'));
+WHERE employee_id = (SELECT manager_id 
+                     FROM employees 
+                     WHERE employee_id = (SELECT manager_id 
+                                          FROM employees 
+                                          WHERE employee_name = 'Smith'));
 
 # Question 82
 SELECT COUNT(*)
@@ -526,14 +600,17 @@ AND salary > 1800;
 # Question 84
 SELECT location
 FROM employees
-WHERE salary = (SELECT MAX(salary) FROM employees)
+WHERE salary = (SELECT MAX(salary) 
+                FROM employees)
 AND manager_id IS NULL;
 
 # Question 85
 SELECT *
 FROM employees
 WHERE department_name = 'Accounting'
-AND salary > (SELECT AVG(salary) FROM employees WHERE department_name = 'Accounting');
+AND salary > (SELECT AVG(salary) 
+              FROM employees 
+              WHERE department_name = 'Accounting');
 
 # Question 86
 SELECT location
@@ -543,27 +620,39 @@ WHERE commission > 0;
 # Question 87
 SELECT *
 FROM employees
-WHERE manager_id <> (SELECT employee_id FROM employees WHERE job = 'PRESIDENT')
+WHERE manager_id <> (SELECT employee_id 
+                     FROM employees 
+                     WHERE job = 'PRESIDENT')
 AND commission > 0
-AND salary > (SELECT MAX(salary) FROM employees WHERE job = 'CLERK');
+AND salary > (SELECT MAX(salary) 
+              FROM employees 
+              WHERE job = 'CLERK');
 
 # Question 88
 SELECT *
 FROM employees
-WHERE salary > (SELECT AVG(salary) FROM employees WHERE department_id = 20);
+WHERE salary > (SELECT AVG(salary) 
+                FROM employees 
+                WHERE department_id = 20);
 
 # Question 89
 SELECT department_name, location
 FROM employees
 WHERE job = 'CLERK'
-AND manager_id = (SELECT employee_id FROM employees WHERE employee_name = 'Blake')
-AND salary < (SELECT salary FROM employees WHERE employee_name = 'Martin');
+AND manager_id = (SELECT employee_id 
+                  FROM employees 
+                  WHERE employee_name = 'Blake')
+AND salary < (SELECT salary 
+              FROM employees 
+              WHERE employee_name = 'Martin');
 
 # Question 90
 SELECT location, department_name
 FROM employees
 WHERE job = 'MANAGER'
-AND salary < (SELECT MIN(salary) FROM employees WHERE job = 'CLERK');
+AND salary < (SELECT MIN(salary) 
+              FROM employees 
+              WHERE job = 'CLERK');
 
 # Question 91
 SELECT location
@@ -579,7 +668,10 @@ ORDER BY employee_id DESC;
 # Question 93
 SELECT department_name, location, department_id
 FROM employees
-WHERE manager_id IN (SELECT manager_id FROM employees GROUP BY manager_id HAVING COUNT(*) > 1);
+WHERE manager_id IN (SELECT manager_id 
+                     FROM employees 
+                     GROUP BY manager_id 
+                     HAVING COUNT(*) > 1);
 
 # Question 94
 SELECT AVG(salary)
@@ -621,16 +713,26 @@ AND EXTRACT(YEAR FROM hire_date) < 1982;
 # Question 101
 SELECT *
 FROM employees
-WHERE job = (SELECT job FROM employees WHERE employee_name = 'Smith')
-AND department_id = (SELECT department_id FROM employees WHERE employee_name = 'Jones')
-AND salary > (SELECT salary FROM employees WHERE employee_name = 'Turner');
+WHERE job = (SELECT job 
+             FROM employees 
+             WHERE employee_name = 'Smith')
+AND department_id = (SELECT department_id 
+                     FROM employees 
+                     WHERE employee_name = 'Jones')
+AND salary > (SELECT salary 
+              FROM employees 
+              WHERE employee_name = 'Turner');
 
 # Question 102
 SELECT *
 FROM employees
 WHERE employee_name LIKE 'S%'
-AND salary > (SELECT salary FROM employees WHERE employee_name = 'Allen')
-AND salary < (SELECT salary FROM employees WHERE employee_name = 'Ford');
+AND salary > (SELECT salary 
+              FROM employees 
+              WHERE employee_name = 'Allen')
+AND salary < (SELECT salary 
+              FROM employees 
+              WHERE employee_name = 'Ford');
 
 # Question 103
 SELECT *
@@ -658,30 +760,38 @@ LIMIT 1 OFFSET 1;
 SELECT department_name
 FROM employees
 WHERE salary = (SELECT DISTINCT salary
-FROM employees
-ORDER BY salary
-LIMIT 1 OFFSET 2);
+                FROM employees
+                ORDER BY salary
+                LIMIT 1 OFFSET 2);
 
 # Question 108
 SELECT *
 FROM employees
-WHERE salary > (SELECT MAX(salary) FROM employees WHERE job = 'MANAGER');
+WHERE salary > (SELECT MAX(salary) 
+                FROM employees 
+                WHERE job = 'MANAGER');
 
 # Question 109
 SELECT *
 FROM employees
-WHERE salary > (SELECT MAX(salary) FROM employees WHERE job = 'MANAGER');
+WHERE salary > (SELECT MAX(salary) 
+                FROM employees 
+                WHERE job = 'MANAGER');
 
 # Question 110
 SELECT employee_id, job, salary
 FROM employees
 WHERE job = 'ANALYST'
-AND salary > (SELECT MAX(salary) FROM employees WHERE job = 'MANAGER');
+AND salary > (SELECT MAX(salary) 
+              FROM employees 
+              WHERE job = 'MANAGER');
 
 # Question 111
 SELECT department_name, location
 FROM employees
-WHERE manager_id = (SELECT employee_id FROM employees WHERE employee_name = 'Clark');
+WHERE manager_id = (SELECT employee_id 
+                    FROM employees 
+                    WHERE employee_name = 'Clark');
 
 # Question 112
 SELECT *
@@ -691,12 +801,15 @@ WHERE location = 'Dallas';
 # Question 113
 SELECT *
 FROM employees
-WHERE salary > (SELECT AVG(salary) FROM employees WHERE department_id = 20);
+WHERE salary > (SELECT AVG(salary) 
+                FROM employees 
+                WHERE department_id = 20);
 
 # Question 114
 SELECT *
 FROM employees
-WHERE salary = (SELECT MAX(salary) FROM employees);
+WHERE salary = (SELECT MAX(salary) 
+                FROM employees);
 
 # Question 115
 SELECT *
