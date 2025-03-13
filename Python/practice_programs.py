@@ -36,3 +36,17 @@
 
 ##o/p = {'Program','Program','ABC','ABC'}
 
+
+
+def max_substring(s):
+    ms = ''
+    for i in range(len(s)):
+        for j in range(i+1, len(s)+1):
+            sub = s[i:j]
+            if sub > ms:
+                ms = sub
+    return ms
+
+s = 'baca'
+print(max_substring(s))  # Output: 'ca'
+
