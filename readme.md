@@ -1,8 +1,13 @@
 ├── Aptitude
+
     ├── 0.01 CONTENT.txt
+
     ├── 0.02 PARTNERSHIP.txt
+
     ├── 0.03 SIMPLIFICATION.txt
+    
     └── 0.04 TIME AND WORK ASSIGNMENT.txt
+
 ├── Incubation Offer Letter..pdf
 ├── Python
     ├── QP_python_loops.py
