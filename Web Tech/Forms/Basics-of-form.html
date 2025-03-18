@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        div.form{
+            width: 20%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid black;
+            margin-top: 100px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 1px;
+            background-color: aqua;
+        }
+        input[type="text"], input[type="email"]{
+            width: 50%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="form">
+        <form action="#">
+            <!-- Names -->
+            <label for="name">Enter Name :</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name Here...">
+            <br><br>
+
+            <!-- Emails -->
+            <label for="email">Enter  Email :</label>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email Here...">
+            <br><br>
+            
+            <!-- Contact -->
+            <label for="contact">Enter Contact :</label>
+            <input type="text" name="contact" id="contact" placeholder="Enter Your Contact Here...">
+            <br><br>
+
+            <!-- Age -->
+            <label for="age">Enter Age :</label>
+            <input type="number" name="age" id="age" placeholder="Enter Your Age Here...">
+            <br><br>
+
+            <!-- DOB -->
+            <label for="dob">D.O.B :</label>
+            <input type="date" name="dob" id="dob">
+            <br><br>
+
+            <!-- Gender -->
+            <label for="gender">Gender : </label>
+            <input type="radio" name="gender" id="gender" value="male">Male
+            <input type="radio" name="gender" id="gender" value="female">Female
+            <input type="radio" name="gender" id="gender" value="others">Others
+            <br><br>
+
+            <!-- Skills -->
+            <label for="skills">Select skills :</label>
+            <input type="checkbox" name="skills" id="skills" value="html">HTML
+            <input type="checkbox" name="skills" id="skills" value="css">CSS
+            <input type="checkbox" name="skills" id="skills" value="js">JS
+            <input type="checkbox" name="skills" id="skills" value="SQL">SQL
+            <input type="checkbox" name="skills" id="skills" value="Python">Python
+            <input type="checkbox" name="skills" id="skills" value="ReactJS">React-JS
+            <input type="checkbox" name="skills" id="skills" value="Bootstrap">Bootstrap
+            <br><br>
+
+            <!-- Address -->
+            <label for="address">Enter Address :</label>
+            <textarea name="address" id="address" cols="30" rows="5" placeholder="Enter Your Address Here..."></textarea>
+            <br><br>
+
+            <!-- Dropdown -->
+             <label for="edu">Choose Your Degree :</label>
+             <select name="dropdwon" id="edu" value="dropdwon">
+                <option value="" name="">Choose a Degree/Stream/Course</option>
+                <optgroup label="B.Tech">
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="AI and ML">AI and ML</option>
+                    <option value="Robotics">Robotics</option>
+                </optgroup>
+                <option value="BCA" name="BCA">BCA</option>
+                <optgroup label="B.COM">
+                    <option value="Finance">Finance</option>
+                    <option value="Banking">Banking</option>
+                    <option value="Marketing(Sales)">Marketing(Sales)</option>
+                </optgroup>
+                <option value="BCS" name="BCS">BCS</option>
+                <optgroup label="MCA">
+                    <option value="Information Technology">Information Technology</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                    <option value="AI and ML">AI and ML</option>
+                </optgroup>
+                <option value="M.Tech" name="M.Tech">M.Tech</option>
+                <option value="MBA" name="MBA">MBA</option>
+             </select>
+             <br><br>
+
+            <!-- Upload File -->
+              <label for="resume">Upload Your Resume :</label>
+              <input type="file" name="resume" id="resume">
+              <br><br>
+
+            <!-- Password -->
+              <label for="password">Enter Your Password :</label>
+              <input type="password" name="password" id="password">
+              <br><br>
+
+            <!-- Color Picker -->
+                <label for="color">Choose Color :</label>
+                <input type="color" name="color" id="color">
+                <br><br>
+
+            <!-- Range Selector -->
+                <label for="range">Select Range :</label>
+                <input type="range" name="range" id="range">
+                <br><br>
+
+            <!-- Image Selector -->
+                <input type="image" src="#" alt="image will be display here...">
+                <br><br>
+
+            <!-- URL -->
+                <input type="url" name="url" id="url">
+                <br><br>
+
+            <!-- Submit -->
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>
