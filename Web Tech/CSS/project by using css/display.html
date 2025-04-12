@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="#">
+    <style>
+        .parent1{
+            height: 400px;
+            width: 1510px;
+            background-color: rgb(245, 187, 137);
+            display: flex;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .parent1 .cards1{
+            background-color: magenta;
+            height: 200px;
+            width: 150px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 8px 3px black;
+        }
+        .parent2{
+            background-color: rgb(231, 44, 20);
+            height: 600px;
+            width: 800px;
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            flex-direction: row-reverse;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 0px solid black;
+        }
+        .parent2 .child{
+                background-color: yellow;
+                height: 100px;
+                width: 100px;
+                border: 1px solid black;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+        }
+        .child:nth-child(2){
+            background-color: red;
+            height: 150px;
+        }
+        .child:nth-child(4){
+            background-color: green;
+            height: 150px;
+        }
+        .cid{
+            background-color: rgb(0, 217, 255);
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 2px 2px black;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <center><h2>Day - 1 (Display)</h2></center>
+    <main class="parent1">
+       <section class="cards1">
+        <img src="https://th.bing.com/th/id/OIP.BK8STvfoGAkPFIe0cTCMxAHaFj?rs=1&pid=ImgDetMain" alt="" height="100px">
+        <h1>Mitali</h1>
+        <h2>50000</h2>
+       </section>
+       <section class="cards1">
+        <img src="https://th.bing.com/th/id/R.5c6bd1c31d48eeaa3ec2e55951f08e58?rik=WKxv7LskuT49Cw&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f35800000%2fPuppy-dogs-35894603-1920-1200.jpg&ehk=2b0h3p5A8qcSr%2ftB6EGud0cO2SLHMhOGl0z%2bd%2bmf2F8%3d&risl=&pid=ImgRaw&r=0" alt="" height="100px">
+        <h1>Rajlaxmi</h1>
+        <h2>60000</h2>
+       </section>
+       <section class="cards1">
+        <img src="https://www.hdwallpapers.in/download/cute_white_puppy_dog_is_standing_on_green_grass_in_blur_bokeh_background_hd_dog-HD.jpg" alt="" height="90px">
+        <h1>anushka</h1>
+        <h2>70000</h2>
+       </section>
+       <section class="cards1">
+        <img src="https://cdn.psychologytoday.com/sites/default/files/styles/image-article_inline_full/public/field_blog_entry_teaser_image/puppy_0.jpg?itok=z4JZm548" alt="" height="100px">
+        <h1>sayali</h1>
+        <h2>80000</h2>
+       </section>
+    </main>
+    <br>
+    <hr>
+    <center><h2>Day - 2 (Display)</h2></center>
+    <main class="parent2">
+            <section class="child">1</section>
+            <section class="child">2</section>
+            <section class="child">3</section>
+            <section class="child">4</section>
+            <section class="cid">5</section>
+    </main>
+</body>
+</html>
+

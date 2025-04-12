@@ -1,0 +1,156 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar{
+    height: 5rem;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .first i{
+    color: red;
+    font-size: 40px;
+    font-weight: 400;
+    margin-left: 40px;
+}
+.navbar .first span{
+    color: red;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    top: -5px;
+}
+.navbar .first:hover{
+    color: black;
+}
+.navbar .second span:first-child{
+    margin-left: 30px;
+    margin-right: 20px; 
+}
+.navbar .second span:hover{
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(159, 173, 168);
+    cursor: pointer;
+}
+.navbar .third div{
+    padding: 8px 15px 8px 15px;
+    border: 2px solid rgb(127, 126, 126);
+    color: gray;
+    background-color: white;
+    border-radius: 20px;
+    position: relative;
+    right: 20px;                
+}
+.navbar .third div:hover{
+    box-shadow: 1px 2px 2px 1px gray;
+}
+.search-box{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.search-box .parent{
+    height: 4rem;
+    width: 70%;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 1px 2px 5px ;
+    display: flex;
+}
+.search-box .parent article:first-child{
+    height: inherit;
+    width: 33%;
+}
+.search-box .parent article:nth-child(2){
+    height: inherit;
+    width: 16.5%;
+}
+.search-box .parent article:nth-child(3){
+    height: inherit;
+    width: 16.5%;   
+}
+.search-box .parent article:last-child{
+    height: inherit;
+    width: 34%; 
+    display: flex; 
+    position: relative;
+}
+.search-box .parent article i{
+       position: absolute;
+       right: 5px;
+       top: 5px;
+       font-size: 15px;
+       padding: 20px;
+       background-color: rgb(240, 77, 77);
+       border-radius: 50%;
+
+}
+.search-box .parent article b{
+    font-weight: 700;
+    font-size: 15px;  
+    margin-left: 10px;
+    margin-top: 20px;
+    position: relative;
+    top: 10px; 
+}
+.search-box .parent article p{
+    font-size: 12px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.search-box .parent article:hover{
+    background-color: gainsboro;
+    border-radius: 40px;
+}
+.card-parent .cards .card{
+      margin-top: 90px;
+      border-radius:20px;
+}
+
+.card-parent{
+    width: 100%;
+    
+}
+
+.card-parent .cards{
+    position: relative;
+    top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-left: 20px;
+}
+
+.card-parent .cards .card{
+    height: 450px;
+    width: 345px;
+    padding: 5px;
+}
+
+.cards .card #btn{
+    background-color: white;
+    padding: 1px 10px 1px 10px;
+    width: 140px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 6px 1px gray;
+    font-size: 13px;
+    position: absolute;
+    top: 110px;
+    left: 30px;
+}
+
+.cards .card #heart{
+    position: absolute;
+    top: 110px;
+    left: 325px;
+}

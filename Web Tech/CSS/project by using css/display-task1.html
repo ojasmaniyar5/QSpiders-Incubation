@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+.parent {
+    background-color: yellow;
+    display: grid;
+    
+    gap: 8px;
+    height: 700px;
+    border: 1px solid black;
+}
+    
+.box1 {
+    grid-column: span 4 / span 4;
+    border: 1px solid black;
+    background-color: pink;
+}
+
+.div2 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+}
+
+.div3 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 6;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div4 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 7;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div5 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 8;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div6 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 9;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div7 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 11;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div8 {
+    grid-column: span 4 / span 4;
+    grid-row-start: 2;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div9 {
+    grid-column: span 4 / span 4;
+    grid-row-start: 3;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div10 {
+    grid-column: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div11 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 1;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div12 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div13 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 3;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div14 {
+    grid-row: span 4 / span 4;
+    grid-column-start: 4;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div17 {
+    grid-column-start: 5;
+    grid-row-start: 3;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div18 {
+    grid-column-start: 5;
+    grid-row-start: 4;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div19 {
+    grid-column-start: 5;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div20 {
+    grid-column-start: 5;
+    grid-row-start: 6;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div21 {
+    grid-column-start: 5;
+    grid-row-start: 7;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div22 {
+    grid-column-start: 6;
+    grid-row-start: 7;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div23 {
+    grid-column-start: 7;
+    grid-row-start: 7;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div24 {
+    grid-column-start: 8;
+    grid-row-start: 7;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div25 {
+    grid-column-start: 6;
+    grid-row-start: 4;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div26 {
+    grid-column-start: 6;
+    grid-row-start: 3;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div27 {
+    grid-column-start: 7;
+    grid-row-start: 3;
+    border: 1px solid black;
+    background-color: pink;
+}
+
+.div28 {
+    grid-column-start: 7;
+    grid-row-start: 4;
+    border: 1px solid black;
+    background-color: pink;
+
+}
+
+.div29 {
+    grid-column-start: 8;
+    grid-row-start: 4;
+    border: 1px solid black;
+    background-color: pink;
+
+}
+
+.div30 {
+    grid-column-start: 8;
+    grid-row-start: 3;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div31 {
+    grid-column-start: 6;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div32 {
+    grid-column-start: 6;
+    grid-row-start: 6;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div33 {
+    grid-column-start: 7;
+    grid-row-start: 6;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div34 {
+    grid-column-start: 7;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div35 {
+    grid-column-start: 8;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div36 {
+    grid-column-start: 8;
+    grid-row-start: 6;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div37 {
+    grid-column-start: 5;
+    grid-row-start: 8;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div38 {
+    grid-column-start: 6;
+    grid-row-start: 8;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div39 {
+    grid-column-start: 7;
+    grid-row-start: 8;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div40 {
+    grid-column-start: 8;
+    grid-row-start: 8;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div41 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 9;
+    grid-row-start: 3;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div42 {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-column-start: 9;
+    grid-row-start: 7;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+
+.div43 {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-column-start: 11;
+    grid-row-start: 5;
+    border: 1px solid black;
+    background-color: pink;
+
+
+}
+        
+    </style>
+</head>
+<body>
+    
+<main class="parent">
+    <section class="box1">1</section>
+    <section class="div2">2</section>
+    <section class="div3">3</section>
+    <section class="div4">4</section>
+    <section class="div5">5</section>
+    <section class="div6">6</section>
+    <section class="div7">7</section>
+    <section class="div8">8</section>
+    <section class="div9">9</section>
+    <section class="div10">10</section>
+    <section class="div11">11</section>
+    <section class="div12">12</section>
+    <section class="div13">13</section>
+    <section class="div14">14</section>
+    <section class="div17">17</section>
+    <section class="div18">18</section>
+    <section class="div19">19</section>
+    <section class="div20">20</section>
+    <section class="div21">21</section>
+    <section class="div22">22</section>
+    <section class="div23">23</section>
+    <section class="div24">24</section>
+    <section class="div25">25</section>
+    <section class="div26">26</section>
+    <section class="div27">27</section>
+    <section class="div28">28</section>
+    <section class="div29">29</section>
+    <section class="div30">30</section>
+    <section class="div31">31</section>
+    <section class="div32">32</section>
+    <section class="div33">33</section>
+    <section class="div34">34</section>
+    <section class="div35">35</section>
+    <section class="div36">36</section>
+    <section class="div37">37</section>
+    <section class="div38">38</section>
+    <section class="div39">39</section>
+    <section class="div40">40</section>
+    <section class="div41">41</section>
+    <section class="div42">42</section>
+    <section class="div43">43</section>
+</main>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.parent {
+    height: 500px;
+    width: 1510px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    border: 1px solid black;
+    background-color: purple;
+    box-shadow: 1px 1px 5px 2px black;
+    align-content: center;
+    justify-content: center;
+}
+    
+.child1 {
+    grid-column: span 2 / span 2;
+    border: 1px solid black;
+    background-color:magenta;
+}
+
+.child2 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    border: 1px solid black;
+    background-color: orange;
+}
+
+.child3 {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    border: 1px solid black;
+    background-color: orangered;
+}
+
+.child4 {
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    border: 1px solid black;
+    background-color: cyan;
+}
+
+.cid5 {
+
+    border: 1px solid black;
+    background-color: orangered;
+}
+
+.cid6 {
+    
+    border: 1px solid black;
+    background-color: cyan;
+}
+
+.cid7 {
+    
+    border: 1px solid black;
+    background-color: orange;
+    height: 140px;
+}
+
+.cid8 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    border: 1px solid black;
+    background-color: magenta;
+}
+
+.cid9 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+    border: 1px solid black;
+    background-color: orangered;
+}
+
+.cid10 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    border: 1px solid black;
+    background-color: orange;
+}
+
+.cid11 {
+    grid-column-start: 4;
+    grid-row-start: 1;
+    border: 1px solid black;
+    background-color: cyan;
+}
+        
+    </style>
+</head>
+<body>
+    
+<main class="parent">
+    <section class="child1">1</section>
+    <section class="child2">2</section>
+    <section class="child3">3</section>
+    <section class="child4">4</section>
+    <section class="cid5">5</section>
+    <section class="cid6">6</section>
+    <section class="cid7">7</section>
+    <section class="cid8">8</section>
+    <section class="cid9">9</section>
+    <section class="cid10">10</section>
+    <section class="cid11">11</section>
+</main>
+    
+</body>
+</html>
