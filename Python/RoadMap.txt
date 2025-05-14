@@ -1,0 +1,63 @@
+Day-1
+Library functions 
+Keywords
+Variables 
+Multiple variable creation
+
+Day - 2
+Datatypes
+Slicing 
+Typecasting
+
+Day-3
+Operators
+Control statements
+
+Day - 4
+Conditional Statement
+Looping statements
+
+Day - 5 
+Conditional and looping programs
+All logical and number programs
+
+Day - 6 
+Pattern programming 
+( solid and hollow pattern) 
+Intermediate Termination
+
+Day -7 
+Functions 
+in-built and user-defined
+
+Day - 8
+Scope of Variable
+Types of Parameter 
+Packing and Unpacking 
+
+Day-9 
+Recursion 
+Introduction to Oops 
+
+Day - 10 
+Class and objects
+Types of method 
+Types of States 
+
+Day -11 
+Polymorphism
+Inheritance 
+
+Day-12 
+Abstraction 
+Encapsulation
+
+Day - 13
+Functional Programming 
+Comprehension 
+Decorator
+
+Day - 14
+Iterator 
+Generator 
+File Handling
