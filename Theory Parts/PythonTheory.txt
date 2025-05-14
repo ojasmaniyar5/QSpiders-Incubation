@@ -87,7 +87,7 @@ etc.
     1. int
     2. decimal
     3. complex
-    boolean(True/False)
+    4. boolean(True/False)
 *AND, In Multi/Collection Values:
     1. str
     2. list
