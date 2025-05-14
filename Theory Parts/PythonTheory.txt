@@ -1,0 +1,125 @@
+1. Introduction To python:
+*Python is a high-level, easy-to-learn, interpreted programming language used for web apps, automation, AI, etc.
+
+
+2. History:
+*Python was created in the late 1980s by Guido van Rossum.
+
+
+3. Features:
+* Easy to learn and use
+* High-level language
+* Interpreted language
+* Object-oriented
+* Large standard library
+* Cross-platform
+* Open Source
+
+
+4. Advantages and Disadvantages:
+* Advantages: 
+    1. Easy to learn. 
+    2. fast development.
+    3. large community.
+    4. cross-platform.
+* Disadvantages: 
+    1. low performance
+    2. limited multithreading support.
+
+
+5 .Applications of Python:
+* Web development (e.g., Django, Flask)
+* Data analysis and science (e.g., NumPy, pandas, Matplotlib)
+* Automation (e.g., scripting, data scraping)
+* Artificial intelligence and machine learning (e.g., TensorFlow, Keras)
+* Scientific computing (e.g., NumPy, SciPy, Pandas)
+* Gaming (e.g., Pygame, Pyglet)
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+6. Library Functions:
+*   `print()`: prints output to the screen
+*   `input()`: gets user input
+*   `len()`: returns the length of a string or list
+*   `range()`: generates a sequence of numbers
+*   `list()`: creates a list from a sequence
+*   `tuple()`: creates a tuple from a sequence
+*   `dict()`: creates a dictionary from a sequence of key-value pairs
+*   `set()`: creates a set from a sequence of unique elements
+*   `str()`: converts a value to a string
+*   `int()`: converts a value to an integer
+*   `float()`: converts a value to a floating-point number
+*   `bool()`: converts a value to a boolean value
+etc.
+
+
+7. Keywords:
+*Keywords are reserved words in Python that have special meanings. 
+*Cannot be used as variable names or Function name.
+*Some common keywords include:
+    1. if
+    2. else
+    3. for
+    4. while
+    5. def
+    6. class
+    7. try
+    8. except
+    9. finally
+    10. with
+
+
+8. variables:
+*In Python, a variable is a name given to a value. The value can be a number, a string, a list, a dictionary, etc.
+*Variables are used to store and manipulate data in a program.
+*So, There are Single and Multiple variables in python.
+*Single variable is used to store one value at a time. Example, x = 5
+*Multiple variables are used to store multiple values at a time. Example, x, y, z = 5, 10, 15
+
+
+9. Data Types:
+*Datatypes means the type of data that a variable can hold.
+*In Python, different types of data are stored differently.
+*There are Two Types of Datatypes : Sngle Value and Multi/Collection DataTypes.
+*So, In Single Values:
+    1. int
+    2. decimal
+    3. complex
+    boolean(True/False)
+*AND, In Multi/Collection Values:
+    1. str
+    2. list
+    3. tuple
+    4. set
+    5. dict
+
+
+10. Slicing:
+*Slicing means cutting parts of a string, list or tuple.
+*It is use to select the a range of a items.
+*Syntax:
+    data[start:end]
+    - start: Starting index (included)
+    - end: Ending index (excluded)
+*Example:
+    text = "Python"
+    print(text[0:2]) # Output: 'Py' (From index 0 to 1)
+    print(text[2:5]) # Output: 'tho' (From index 2,3,4)
+    print(text[-1]) # Output: 'n' (Last Character)
+
+
+11. Typecasting:
+*Typecasting means converting one Datatype into another.
+* Example: converts string to int, float to int, etc.
+    1. x = "100"
+       y = int(x)          # Now y is interger 100
+
+    2. a = 5
+       b = str(a)          # Now b is string '5'
+
+    3. c = 3.7
+       d = int(c)          # Now d is integer 3 (decimal part removed)
+
+
