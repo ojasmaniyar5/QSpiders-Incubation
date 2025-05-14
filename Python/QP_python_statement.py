@@ -1,6 +1,6 @@
 # if else.
 
-#1 Write a program to check the if the sum of 2 number is greater than 100
+#1 Write a program to check the if the sum of 2 number is greater than 100 ?
 
 #2 Write a program if the first and last character of string is same ?
 

@@ -1,3 +1,6 @@
+#Single Inheritance Concepts.
+
+
 class Father:
     property1 = "Car"
     property2 = "House"

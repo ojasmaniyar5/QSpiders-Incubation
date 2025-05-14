@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>ProjectHub</title>
+    <style>
+        hr.new{
+            border-top: 2px dotted black;
+        }
+        button.b1{
+            border-color: black;
+        }
+        button{
+            background: transparent;
+            border-color:transparent ;
+        }
+        table{
+          
+            width: 100%;
+        }
+        tr{
+            height: 100px;
+        }
+        
+body {
+  background-image: url('blur.jpg');
+    background-size: cover;
+}
+
+        .box {
+             
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        p {
+            font-size: 17px;
+            align-items: center;
+        }
+        .box a {
+            display: flex;
+            background-color: transparent;
+            padding: 15px;
+            border-radius: 3px;
+            border: black;
+            border-color: black;
+        }
+        .modal {
+            align-items: center;
+            display: flex;
+            justify-content: center; 
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: transparent;
+            transition: all 0.4s;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .content {
+            position: absolute;
+            background: white;
+            width: 400px;
+            padding: 1em 2em;
+            border-radius: 4px;
+        } 
+        .modal:target {
+            visibility: visible;
+            opacity: 1;
+        }
+        .box-close {
+            position: absolute;
+            top: 0;
+            right: 15px;
+            color: black;
+            text-decoration: none;
+            font-size: 30px;
+        }
+        table{
+            height: 60%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <center><h1><u>Project Hub</u></h1></center></header>
+<br>
+    <hr class="new">
+    <!-- <div>
+        <input type="text" name="search" placeholder="Search Here....">
+    </div> -->
+    <div>
+        <center><h2>Project List</h2></center>
+    </div>
+    <div>
+<main>
+    <table border="1" align="center" width="30%" height="60%">
+        <tr>
+            <th colspan="4">
+            <center><h3>Categories</h3></center>
+            </th>
+        </tr>
+        <tr>
+            <th><a href="#popup-box"><button> <h3>Healthcare.</h3></button></a></th>
+            
+            <th><a href="#popup-box"><button> <h3>Machine Learning.</h3></button></a></th>
+            <th><a href="#popup-box"><button> <h3>E-Commerce.</h3></button></a></th>
+            <th><a href="#popup-box"><button> <h3>Social Networking.</h3></button></a></th>
+        </tr>
+        <tr>
+            <th><a href="#popup-box"><button> <h3>Management Systems.</h3></button></a></th>
+            <th><a href="#popup-box"><button> <h3>Mobile Apps.</h3></button></a></th>
+            <th><a href="#popup-box"><button> <h3>Games.</h3></button></a></th>
+            <th><a href="#popup-box"><button> <h3>API Projects.</h3></button></a></th>
+        </tr>
+    </table>
+ </main>
+
+<!--- Healthcare Box --->
+<div class="box">
+      
+    
+    <div id="popup-box" class="modal">
+        <div class="content">
+            
+            <b>
+               <form action="database.php" method="POST">
+                <p>Please select your favorite Web language:</p>
+                <input type="radio" id="C" name="C" value="C"><label for="C">C</label><br>
+                <input type="radio" id="C++" name="C_PLUS" value="C++"><label for="C++">C++</label><br>
+                <input type="radio" id="HTML" name="HTML" value="HTML"><label for="HTML">HTML</label> <br>
+                <input type="radio" id="JS" name="JS" value="JS"><label for="JS">JS</label><br>
+                <input type="radio" id="JAVA" name="JAVA" value="JAVA"><label for="JAVA">JAVA</label><br>
+                <input type="radio" id="Python" name="Python" value="Python"><label for="Python">Python</label><br>
+                <input type="radio" id="PHP" name="PHP" value="PHP"><label for="PHP">PHP</label><br>
+                <input type="radio" id="RDBMS" name="RDBMS" value="RDBMS"><label for="RDBMS">RDBMS</label><br>
+                <button class="b1">Select</button>
+            </form>
+            </b>
+            <a href="#"
+            class="box-close">
+                ×
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

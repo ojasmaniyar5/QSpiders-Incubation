@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		form  { display: table; 
+		     }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+body {
+  background-image: url('blur.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+}
+	button {
+			background: transparent;
+   border: transparent;
+   width: 150px;
+   height: 100px;
+}
+
+.star {
+font-size: 5vh;
+cursor: pointer;
+}
+
+.one {
+color: rgb(255, 0, 0);
+}
+
+.two {
+color: rgb(255, 106, 0);
+}
+
+.three {
+color: rgb(251, 255, 120);
+}
+
+.four {
+color: rgb(255, 255, 0);
+}
+
+.five {
+color: rgb(24, 159, 14);
+}
+
+.i1{
+	width: 20%;
+}
+.main_full{
+	margin-left: 5%;
+}
+h2 {
+            color: #333;
+        }
+
+        .rating-container {
+            display: inline-block;
+        }
+
+        .rating-container input {
+            display: none;
+        }
+
+        .rating-container label {
+            font-size: 30px;
+            color: #ccc;
+            cursor: pointer;
+        }
+
+        .rating-container input:checked ~ label {
+            color: #ffcc00;
+        }
+	</style>
+
+
+
+</head>
+<body>
+	<h1><center><u>PROJECT HUB</u></center></h1>
+	<table border="black" align="center" width="1500px">
+		<tr>
+			<td colspan="3" align="center"><h3>project title</h3></td>
+		</tr>
+	</table><br>
+	<form action="pdetails.php" method="POST" >
+		<p>
+		<label><b>College Name:</b></label>
+		<input type="text" name="cname">
+	</p><br>
+			<p>
+		<label><b>Developers(Student):</b></label>
+		<input type="text" name="sname"><br>
+	</p>
+		<p>
+		<label><b>Short Discription:</b></label><br><textarea cols="40%" rows="4%" name="dis"></textarea>
+		<br>
+	</p>
+		<p><label><b>Date Uploaded</b></label>
+		<input type="date" name="pdate"><br></p><br>
+		<form action="display.php" method="POST">
+			<p><label><b>Suggession:</b></label><br>
+				<textarea cols="40%" rows="4%" name="suggestion"></textarea>
+			</p>
+	
+	<label><b>Technology(Programming Language):</b></label><br>
+	
+		<tr>
+	<main class="main_full">
+	<div class="container">
+		<div class="panel">
+			<div class="button_outer">
+				<div class="btn_upload">
+					<input type="file" id="upload_file" name="image" value="upload">
+					Upload Image
+				</div>
+				<div class="processing_bar"></div>
+				<div class="success_box"></div>
+			</div>
+		</div>
+		<div class="error_msg"></div>
+		<div class="uploaded_file_view" id="uploaded_view">
+			<span class="file_remove"></span>
+		</div>
+	</div>
+</main>
+<main class="main_full">
+	<div class="container">
+		<div class="panel">
+			<div class="button_outer">
+				<div class="btn_upload">
+					<input type="file" id="upload_file" name="pdf">
+					Upload pdf
+				</div>
+				<div class="processing_bar"></div>
+				<div class="success_box"></div>
+			</div>
+		</div>
+		<div class="error_msg"></div>
+		<div class="uploaded_file_view" id="uploaded_view">
+			<span class="file_remove"></span>
+		</div>
+	</div>
+</main>
+<main class="main_full">
+	<div class="container">
+		<div class="panel">
+			<div class="button_outer">
+				<div class="btn_upload">
+					<input type="file" id="upload_file" name="video">
+					Upload video
+				</div>
+				<div class="processing_bar"></div>
+				<div class="success_box"></div>
+			</div>
+		</div>
+		<div class="error_msg"></div>
+		<div class="uploaded_file_view" id="uploaded_view">
+			<span class="file_remove"></span>
+		</div>
+	</div>
+</main>
+
+	    <button><input type="submit" name="submit"></button>
+  </form>
+
+</body>
+</html>

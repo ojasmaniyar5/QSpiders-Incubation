@@ -1,4 +1,9 @@
 # Inheritance Concepts
+# This is a multilevel inheritance example in Python.
+# Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class (called the child or derived class) to inherit attributes and methods from another class (called the parent or base class). This promotes code reusability and establishes a hierarchical relationship between classes.
+# Inheritance can be single, multiple, or multilevel. In this example, we will focus on multilevel inheritance, where a class inherits from another derived class.
+# Multilevel inheritance is a type of inheritance where a class is derived from another derived class. This creates a chain of inheritance, allowing the derived class to inherit attributes and methods from both the base class and the intermediate derived class.
+# This allows for a more organized and structured approach to code organization, as well as the ability to create more complex class hierarchies.
 # This is the real world example of inheritance in Python.
 class Bank:
     def __init__(self, name, phone, aadhar, address):
