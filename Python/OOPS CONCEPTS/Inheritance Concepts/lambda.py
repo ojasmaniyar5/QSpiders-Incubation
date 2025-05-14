@@ -23,9 +23,9 @@
 # print(l1)
 
 
-# Write a program of following given list using lambda function and filter function:
-# input : l = [1,2,3,4,5]
-# output : [1,4,9,16,25]
+Write a program of following given list using lambda function and filter function:
+input : l = [1,2,3,4,5]
+output : [1,4,9,16,25]
 
 n = lambda x: x**2
 l1 = (map(suqr,[1, 2, 3, 4, 5]))
