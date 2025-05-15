@@ -1,0 +1,73 @@
+# Iterator In Python:
+- An iterator is an object that allows a programmer to traverse through all the values of a sequence ( like a list, tuple, dictionary, set, or string) in a special way. 
+- It is an object that implements the iterator protocol, which consists of the methods __iter__() and __next__() .
+
+- It uses two main methods:
+    1. __iter__
+    2. __next__
+
+- 1. __iter__: - This method returns the iterator object itself.
+               - Iterator do not store all items in memory, they give one item at a time.
+
+               Example:
+                    # List is iterable
+                    my_list = [1, 2, 3, 4, 5]
+
+                    # Make it an iterator
+                    my_iter = iter(my_list)
+
+                    print(next(my_iter)) # prints 1
+                    print(next(my_iter)) # prints 2
+                    print(next(my_iter)) # prints 3
+
+
+
+- 2. __next__: - This method returns the next value from the iterator. 
+               - It raises a StopIteration exception when there are no more items to return.
+
+               Example:
+                    # List is iterable
+                    my_list = [1, 2, 3, 4, 5]
+
+                    # Make it an iterator
+                    my_iter = iter(my_list)
+
+                    print(my_iter.__next__()) # prints 1
+                    print(my_iter.__next__()) # prints 2
+                    print(my_iter.__next__()) # prints 3
+
+
+---------------------------------------------------------------------------------------------------------------
+
+
+# Generator In Python:
+- A generator is a special type of function that can be used to generate a sequence of results instead of computing them all at once and returning them in a list, or printing them one by one.
+
+# Why use generators?
+- Save Memory (doesn't store entire sequence in memory).
+- Stop automatically when done (no need to stop iteration).
+
+Example: 1
+    def my_generator():
+        yield 1
+        yield 2
+        yield 3
+
+    gen = my_generator()
+
+    print(next(gen)) # prints 1
+    print(next(gen)) # prints 2
+    print(next(gen)) # prints 3
+
+
+Example: 2
+    def count(n):
+        i = 1
+        while i <= n:
+            yield i
+            i += 1
+
+    for num in count(5):
+        print(num) 
+        
+    # prints 1, 2, 3, 4, 5
