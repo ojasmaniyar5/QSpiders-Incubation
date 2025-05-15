@@ -72,7 +72,7 @@ etc.
 
 
 8. variables:
-*In Python, a variable is a name given to a value. The value can be a number, a string, a list, a dictionary, etc.
+*In8010782571 Python, a variable is a name given to a value. The value can be a number, a string, a list, a dictionary, etc.
 *Variables are used to store and manipulate data in a program.
 *So, There are Single and Multiple variables in python.
 *Single variable is used to store one value at a time. Example, x = 5
@@ -122,4 +122,183 @@ etc.
     3. c = 3.7
        d = int(c)          # Now d is integer 3 (decimal part removed)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+12. Operators:
+*Operators are used to perform operations on variables and values.
+*There are seven types of operators:
+    1. Arithmetic Operators.
+    2. Comparison Operators.
+    3. Assignment Operators.
+    4. Logical Operators.
+    5. Membership Operators.
+    6. Identity Operators.
+    7. Bitwise Operators.
+
+        1. Arithmetic Operators:
+        * Definition: Arithmetic operators are used to perform mathematical operations like addition, subtraction, multiplication, division, modulus, exponentiation, etc.
+        * Example:
+            a = 10
+            b = 5
+            print(a + b) # Output: 15 (Addition)
+            print(a - b) # Output: 5 (Subtraction)
+            print(a * b) # Output: 50 (Multiplication)
+            print(a / b) # Output: 2.0 (Division)
+            print(a % b) # Output: 0 (Modulus)
+            print(a ** b) # Output: 100000 (Exponentiation)
+
+        2. Comparison Operators:
+        * Definition: Comparison operators are used to compare the values of two variables.
+        * Example:
+            a = 10
+            b = 5
+            print(a == b) # Output: False (Not Equal)
+            print(a != b) # Output: True (Equal)
+            print(a > b) # Output: True (Greater than)
+            print(a < b) # Output: False (Less than)
+            print(a >= b) # Output: True (Greater than or Equal to)
+            print(a <= b) # Output: False (Less than or Equal to)
+
+        3. Assignment Operators:
+        * Definition: Assignment operators are used to assign a value to a variable.
+        * Example:
+            a = 10
+            b = a
+            print(b) # Output: 10
+            print(a) # Output: 10
+            print(a += 5) # Output: 15 (Addition Assignment)
+            print(a -= 5) # Output: 10 (Subtraction Assignment)
+            print(a *= 5) # Output: 50 (Multiplication Assignment)
+            print(a /= 5) # Output: 10.0 (Division Assignment)
+            print(a %= 5) # Output: 0 (Modulus Assignment)
+            print(a **= 5) # Output: 100000 (Exponentiation Assignment)
+
+        4. Logical Operators:
+        * Definition: Logical operators are used to perform logical operations like AND, OR, NOT, etc.
+        * Example:
+            a = True
+            b = False
+            print(a and b) # Output: False (AND)
+            print(a or b) # Output: True (OR)
+            print(not a) # Output: False (NOT)
+
+        5. Membership Operators:
+        * Definition: Membership operators are used to check if a value is present in a sequence or not.
+        * Example:
+            a = [1, 2, 3, 4, 5]
+            print(1 in a) # Output: True (In)
+            print(6 in a) # Output: False (Not In)
+
+        6. Identity Operators:
+        * Definition: Identity operators are used to check if two variables are the same object or not.
+        * Example:
+            a = [1, 2, 3]
+            b = [1, 2, 3]
+            print(a is b) # Output: False (Not the same object)
+            print(a is not b) # Output: True (Not the same object)
+
+        7. Bitwise Operators:
+        * Definition: Bitwise operators are used to perform operations on bits.
+        * Example:
+            a = 5 # Binary: 101
+            b = 3 # Binary: 011
+            print(a & b) # Output: 1 (Binary: 001) (Bitwise AND)
+            print(a | b) # Output: 7 (Binary: 111) (Bitwise OR)
+            print(a ^ b) # Output: 6 (Binary: 110) (Bitwise XOR)
+            print(~a) # Output: -6 (Binary: 111111111111111111111)
+            print(a << 1) # Output: 10 (Binary: 1010) (Left Shift)
+            print(a >> 1) # Output: 2 (Binary: 10) (Right Shift)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13. Control Statement:
+* Definition: Control statements are used to control the flow of a program.
+* Types:
+    1. Conditional Statements:
+        a. if Statement.
+        b. elif Statement.
+        c. else Statement.
+    2. Loops:
+        a. for Loop.
+        b. while Loop.
+    3. Loop Control Statements:
+        a. break Statement.
+        b. continue Statement.
+        c. pass Statement.
+
+    1. Conditional Statements:
+    * Definition: Conditional statements are used to execute a block of code if a certain condition is met.
+        * Synatx:
+            if condition:
+                # code
+            elif another_condition:
+                # code
+            else:
+                # code
+
+    2. Loops:
+    * Definition: Loops are used to execute a block of code repeatedly for a specified number of times.
+        * Synatx;
+            1. for Loop:
+                for i in range(1,5):
+                    print(i) # Output: 1, 2, 3, 4
+            
+            2. while Loop:
+                while condition:
+                    # code
+
+    3. Loop Control Statements:
+    * Definition: Loop control statements are used to control the flow of a loop.
+        1. break Statement:
+            - Definition: The break statement is used to terminate or exits a loop.
+
+        2. continue Statement:
+            - Definition: The continue statement is used to skip the current iteration of a loop.
+
+        3. pass Statement:
+            - Definition: The pass statement is used as a placeholder when a statement is required syntactically but no execution of code is necessary.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+14. Functions:
+* Definition: 
+    - Functions are reusable blocks of code that can be called multiple times from different parts of a program.
+    - A Function is a group of related statements that performs a specific task.
+
+* Types  of Functions:
+    - Built - in Functions.
+    - User - defined Functions.
+
+    1. Built - in Functions:
+    - Definition: Built-in functions are functions that are already available in Python and can be used directly.
+    - Examples: print(), len(), max(), min(), etc.
+    - Syntax: 
+        function_name(parameters)
+            # body of the function
+            return value
+
+    2. User - defined Functions:
+    - Definition: User-defined functions are functions that are created by the user.
+    - Why use user-defined functions?
+        - To avoid code duplication.
+        - To make the code more readable and maintainable.
+        - To make the code more efficient.
+        - Easy to debugging.
+        - Better program structure.
+    - Syntax:
+        def function_name(parameters):
+            # body of the function
+            return value
+        function_name() # calling the function
+    - Example:
+        def add(a, b):
+            result = a + b
+            return result
+        print(add(5, 7)) # Output : 12
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+z
