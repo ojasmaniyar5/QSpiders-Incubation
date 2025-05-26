@@ -72,7 +72,7 @@ etc.
 
 
 8. variables:
-*In8010782571 Python, a variable is a name given to a value. The value can be a number, a string, a list, a dictionary, etc.
+*In Python, a variable is a name given to a value. The value can be a number, a string, a list, a dictionary, etc.
 *Variables are used to store and manipulate data in a program.
 *So, There are Single and Multiple variables in python.
 *Single variable is used to store one value at a time. Example, x = 5
@@ -301,4 +301,622 @@ etc.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-z
+15. Scope Of variable:
+* Definition:
+    - Scope of a variable refers to the region or part of the program where the variable is accesible or can be used.
+    - In Python, scope determines where a variable is visible and how long it exits during the program execution.
+    - In Simple words, Scope of a variable is the areain the code where that variable can be accessed or modified.
+
+* Types of Variables:
+    - Local Variable.
+    - global variable.
+
+    1. Local Variable:
+        - A local variable is a variable that is declared inside a function and is accessible only within that function.
+        - Synatx:
+            def function():
+                local_var = 10
+                print(local_var)
+        - Example:
+            def greet():
+                name = "Alice" # Local variable
+                print("Hello", name)
+
+            greet()     
+            # print(name)   # Error: name is not accessible outside the function.
+
+    2. Global Variable:
+        - A global variable is a variable that is declared outside all functions and is accessible throughout the entire program.
+        - Synatx:
+            global_var = 5
+
+            def function():
+                print(global_var)
+        - Example:
+            x = 100     # global Variable
+
+            def show():
+                print("Global x:" x)
+            
+            show()
+            print("outside function X: ",x)
+
+        - MODIFYING GLOBAL VARIABLE INSIDE A FUNCTIONS:
+        - Example:
+            x = 10
+
+            def change():
+                global x
+                x = 20
+
+            change()
+            print(x)    # Output: 20
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+16. Types of Parameters:
+    1. Positional Parameters.
+    2. Default Parameters.
+    3. Keyword Parameters.
+    4. Variables-length Parameters.
+
+    1. Positional Parameters:
+        - Matched by position in the function call.
+        - Example:
+            def greet(name, age):
+                print("Hello {name}, yo are {age} years old.")
+            greet()
+
+
+    2. Default Parameters:
+        - Provide a Default value if not supplied.
+        - Example;
+            def greet(name="Guest"):
+                print(f"Hello {name}")
+            greet()         # Hello Guest
+            greet("Alice")  # Hello Alice
+
+
+    3. Keyword Parameters;
+        - Passed using name=value Synatx.
+        -  Example:
+            def greet(name, age):
+                print(f"Hello {name}, age {age}")
+            greet(age=25, name="Alice")
+
+
+    4. Variable-length Parameters:
+        - Accept arbitrary numbers of arguments.
+        - Example:
+            def demo(*args, **kwargs):
+                print("Args:", args)
+                print("Kwargs:", kwargs)
+            demo(1, 2, 3, name="Alice", age=25)
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+17. Packing and Unpacking:
+    - Packing:
+        - Combining Multiple Values into a single variable * or **.
+    - Example:
+        def func(*args):
+        print(args)
+    func(1, 2, 3)  # Output: (1, 2, 3)
+
+
+    - Unpacking:
+        - Splitting elements from a container (like a list or tuple) into separate variable.
+    - Example:
+        a, b, c = [1, 2, 3]
+        print(a, b, c)
+
+        # Unpacking with *
+        def add(x, y, z):
+            return x + y + z
+
+        nums = [1, 2, 3]
+        print(add(*nums))  # Output: 6
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+18. Recursion:
+- Definition:
+    - Recursion in Python is a programming technique where a function calls itself to solve a problem. 
+    - It is often used to solve problems that can be broken down into smaller, similar sub-problems.
+    - Key Concepts
+        1. Base Case -  A Condition that stops the Recursion.
+        2. Resursive Case - The part where the function calls itself.
+
+    - Example:
+        def factorial(n);
+            if n == 1:
+                return 1                # Base Case
+            else:
+                return n*factorial(n-1) # Recursive Case
+
+        print(factorial(5))             # Output: 120
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+19. Introduction To OPPs:
+    - OOP(Object-Oriented Programming) is a programming paradigm that organizes code around objects and classes rather than functions and logic.
+    - Python is a multi-paradigm language, which means it supports both procedural programming and objects-oriented programming.
+
+    - Why Move Towards OOP in Python ?
+        1. Traditional (Procedural) Programming;
+            - Code is written in function.
+            - Harder to scale and reuse.
+            - Data and functions are separate.
+        2. OOPS Offers:
+            - Modularity (break code into parts)
+            - Resuability (use code multiple times via inheritance)
+            - Encapsulation (Data hiding)
+            - Real-world (Objects like Car, Students)
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+20. Class and Object:
+1. Classes:
+    - A class is a blueprint or a template that defines the properties and behavior of an object.
+
+2. Objects:
+    - An object is an instance of a class and has its own set of attributes (data) and methods ( functions).
+
+Example of Classes and Object:
+    class Student:
+        def __init__(self, name, age, grade):
+            self.name = name
+            self.age = age
+            self.grade = grade
+        
+        def display(self):
+            print(f"Name: {self.name}, Age: {self.age}, Grade: {self.grade}")
+
+        # Creating an object of the class
+        student1 = Student("John", 20, 90)
+        student1.display()                  # Output: Name: John, Age: 20, Grade: 90
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+21. Types of Methods:
+1. Instance Method:
+2. Static Method:
+3. Class Method:
+
+1. Instance Method:
+- Instance methods are used to perform operations on the data of an instance of a class.
+- They are used to access and modify the attributes of an instance.
+
+2. Static Method:
+- Static methods are used to group related functions together.
+- They do not have access to the instance data.
+- They are used to perform operations that do not depend on the state of the class or its instances.
+
+3. Class Method:
+- Class methods are used to perform operations on the class itself, rather than on an instance of the class.
+- They are used to create a new instance of the class.
+- They are used to perform operations that depend on the state of the class.
+
+Example:
+class Student:
+    class_var = "Class Level"
+
+    def __init__(self, name):
+        self.name = name
+
+    # Instance Method
+    def display(self):
+        print("Instance Variable:", self.name)
+
+    # Static Method
+    @staticmethod
+    def static_method():
+        print("Static Method")
+
+    # Class Method
+    @classmethod
+    def class_method(cls):
+        print("Class Method")
+    
+# Creating an object of the class
+student1 = Student("John")
+student1.display()                  # Output: Instance Variable: John
+student1.static_method()             # Output: Static Method
+student1.class_method()              # Output: Class Method
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+22. Types of States:
+1. Instance State:
+2. Class State:
+
+1. Instance State:
+- Data unique to each object (Stored in self).
+- It is the state of an instance of a class.
+- It is the data that is associated with an instance of a class.
+- It is the data that is stored in the instance variables of a class.
+
+2. Class State:
+- Data shared by all objects (Stored in class).
+- It is the state of a class.
+- It is the data that is associated with a class.
+- It is the data that is stored in the class variables of a class.
+
+Example:
+class Car:
+    wheels = 4                      # Class Variable
+
+    def __init__(self, color):
+        self.color = color          # Instance Variable
+    
+
+# Creating objects of the class
+car1 = Car("Red")
+car2 = Car("Blue")
+
+print(car1.color)                  # Output: Red
+print(car2.color)                  # Output: Blue
+print(car1.wheels)                 # Output: 4
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+23. inheritance:
+- Inheritance is a mechanism in object-oriented programming (OOP) that allows one class to inherit the properties and behavior of another class. 
+- The class that is being inherited from is called the parent or superclass , and the class that is doing the inheriting is called the child or subclass.
+
+- Purpose:
+    - Resuability of code.
+    - Establish a relationship between different classes.
+
+- Types of Inheritance:
+    1. Single Inheritance.
+    2. Multiple Inheritance.
+    3. Multilevel Inheritance.
+    4. Hierarchical Inheritance.
+    5. Hybrid Inheritance.
+
+    1. Single Inheritance:
+        - A single class inherits from another class.
+        - The child class inherits all the attributes and methods of the parent class.
+        - The parent class is the base class and the child class is the derived class.
+        - Example:
+            class Parent:
+                def display(self):
+                    prit("Parent Method")
+            
+            class Child(Parent):
+                def show(self):
+                    print("Child method")
+                
+            c = Child()
+            c.display()                     # Output: Parent Method
+            c.show()                        # Output: Child Method
+
+
+    2. Multiple Inheritance:
+        - A single class inherits from multiple classes.
+        - The child class inherits all the attributes and methods of the parent classes.
+        - The parent classes are the base classes and the child class is the derived class.
+        - Example:
+            class Father:
+                def skills(self):
+                    print("Gardening")
+            
+            class Mother:
+                def skills(self):
+                    print("Cookling")
+
+            class Child(Father, Mother):
+                def skills(self):
+                    Father.skills(self)
+                    Mother.skills(self)
+                    print("Coding.")
+            
+            c = child
+            c.skills()                      # Output: Gardening, Cooking, Coding.
+
+
+    3. Multilevel Inheritance:
+        - A child class inherits from a parent class, and the parent class inherits from another parent class.
+        - The child class inherits all the attributes and methods of the parent classes.
+        - The parent classes are the base classes and the child class is the derived class.
+        - Example:
+            class Grandparent:
+                def house(self):
+                    print("Grandparent's house")
+                
+            class Parent(Grandparent):
+                def car(self):
+                    print("Parent's car")
+            
+            class Child(Parent);
+                def bike(self):
+                    print("Child's bike")
+                
+            c = Child()
+            c.house()                        # Output: Grandparent's house
+            c.car()                          # Output: Parent's car
+            c.bike()                         # Output: Child's bike.
+
+    4. Hierarchical Inheritance:
+        - Multiple child classes inherit from a single parent class.
+        - The child classes inherit all the attributes and methods of the parent class.
+        - The parent class is the base class and the child classes are the derived classes.
+        - Example:
+            class Parent:
+                def house(self):
+                    print("Parent's house")
+
+            class Child1(Parent):
+                def bike(self):
+                    print("Child's bike")
+            
+            class Child2(Parent):
+                def car(self):
+                    print("Child's car")
+            
+            c1 = Child1()
+            c2 = Child2()
+            c1.house()                        # Output: Parent's house
+            c1.bike()                         # Output: Child's bike
+            c2.house()                        # Output: Parent's house
+            c2.car()                          # Output: Child's car.
+    5. Hybrid Inheritance:
+        - A combination of multiple inheritance and multilevel inheritance.
+        - The child class inherits from multiple parent classes, and the parent classes inherit from other parent classes
+        - The child class inherits all the attributes and methods of the parent classes.
+        - Example:
+            class A:
+                def showA(self):
+                    print("class A")
+                
+            class B(A):
+                def showB(self):
+                    print("Class B")
+            
+            class C:
+                def showC(self):
+                    print("Class C")
+
+            class D(B,C):                       # Hybrid of multiple and multilevel inheritance.
+                def showD(self):
+                    print("Class D")
+
+            d = D()
+            d.showA()                            # Output: Class A
+            d.showB()                            # Output: Class B
+            d.showC()                            # Output: Class C
+            d.showD()                            # Output: Class D.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+24. Polymorphism:
+- Polymorphism means "many forms".
+- In object-orientd programming, polymorphism allows methods with same name to behave differently based on the object calling them.
+- The ability of an object to take on multiple forms.
+
+- There are two types of polymorphism:
+    1. Method Overloading (Complie-time polymorphism).
+    2. Method Overriding (Run-time polymorphism).
+
+1. Method Overloading:
+- Python does not support method overloading by default, if multiple methods with the same name are defined, the last one will override the previous ones.
+
+2. Method Overriding:
+- Occurs when a subclass redefines a method from the parent class with the same name, number and type of parameters.
+- Example:
+    class Animal:
+        def sound(self):
+            print("Animal makes a sound")
+
+    class Dog(Animal);
+        def sound(self):
+            print("Dog barks")
+    
+    a = Animal()
+    a.sound()                               # Output: Animal makes a sound
+
+    d = Dog()
+    d.sound()                               # Output: Dog barks
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+25. Abstraction:
+- Abstraction means hiding complex implmentation details and showing only the essential features of an objects.
+- It helps reduce programming comlexity and effort by focusing on what an object does insted of how ir does it.
+- Example:
+    from abc import ABC, abstractmethod
+
+    # Abstract class
+    class Car(ABC):
+        @abstractmethod
+        def start(self):
+            pass
+        
+        @abstractmethod
+        def stop(self):
+            pass
+        
+    # Concrete class
+    class Toyota(Car):
+        def start(self):
+            print("Car started using keyless entry.")
+        
+        def stop(self):
+            print("Car stopped using regenerative braking.")
+    
+    # using Abstraction
+    my_car = Toyota()
+    my_car.start()  # Output: Car started using keyless entry.
+    my_car.stop()   # Output: Car stopped using regenerative braking.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+26. Encapsulation:
+- Encapsulation means wrapping data and methods into a single unit(class) and restricting direct access to some of the object's components.
+- It protects data from being modified accidentally and allows controlled access.
+- Example:
+    class BankAccount:
+        def __init__(self):
+            self.__balance = 0      # private attribute or variable.
+        
+        def deposit(self, amount):
+            if amount > 0:
+                self.__balance += amount
+            else:
+                print("Invalid deposite amount.")
+        
+        def get_balance(self):
+            return self.__balance
+    
+    # using Encapsulation
+    account = BankAccount()
+    account.deposit(1000)
+    print(account.get_balance())  # Output: 1000
+
+    # Trying to access private variable directly.
+    # print(account.__balance)    # Will raise an error.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+27. Fuctional Programming:
+- Functional programming is a programming paradigm that emphasizes the use of pure functions, immutability, and the avoidance of changing-state and mutable data.
+- Key Concepts:
+    1. Pure Function.
+    2. Immutable Data.
+    3. First-Vlass Functions.
+    4. Higher-Order Functions.
+- Functional Tools:
+    1. Map.
+    2. Filter.
+    3. Reduce.
+    4. Lambda Functions.
+
+    1. Map:
+    - Applies a function to all items.
+
+    2. Filter:
+    - Filters items for which the function return True.
+
+    3. Reduce:
+    - Reduces a sequence to a single value (needs to be imported from functions)
+
+    4. Lambda Functions:
+    - Anonymous functions.
+
+- Example:
+    from functools import reduce
+
+    nums = [1, 2, 3, 4, 5]
+    squred = list(map(lambda x: x**2, nums)) # Output: [1, 4, 9, 16, 25]
+    evens = list(filter(lambda x: x % 2 == 0, nums)) # Output: [2, 4 ]
+    total = reduce(lambda x, y: x + y, nums) # Output: 15
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+28. Comprehension:
+- Comprehensions are a concise way to create colections like lsits, sets, and dictionaries using a single lne of code.
+- Types of Comprehensions:
+    1. List.
+    2. Set.
+    3. Dictionary.
+- Example:
+    1. List Comprehension:
+        squares = [x**2 for x in range(5)]              # [0, 1, 4, 9, 16]
+
+    2. Set Comprehension:
+        evens = {x for x in range(10) if z % 2 == 0}    # {0, 2, 4, 6, 8}
+    
+    3. Dictionary Comprehension;
+        squares_dict = {x: x**2 for x in range(5)}      # {0:0, 1:1, 2:4, 3:9, 4:16}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+29. Decorator:
+- A decorator is a function that takes another function as an argument and extends the behavior of the latter function without permanently modifying it.
+- Syntax:
+    @decorator_name
+    def function_name():
+        pass
+- Example:
+    def my_decorator(func):
+        def wrapper():
+            print("Before function is called")
+            func()
+            print("After function is called")
+        return wrapper
+
+    @my_decorator
+    def say_hello():
+        print("Hello!")
+    
+    say_hello()
+
+    output:
+    Before function is called
+    Hello!
+    After function is called
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+30. Itrator:
+- An itrator is an object in python that can be looped through (iterated).
+- It is used two main methods:
+    1. iter(): holds the address current value and Returns the iterator object.
+    2. next(): Returns the next item from the iterator.
+- Example:
+    my_list = [1, 2, 3]
+    it = iter(my_list)
+    print(next(it))  # 1
+    print(next(it))  # 2
+    print(next(it))  # 3
+    print(next(it))  # StopIteration
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+31. Generators:
+- A generator is a special type of function that can be used to generate a sequence of results instead of computing them all at once and returning them in a list, or printing them immediately.
+- A generator is a special type of iterator used to generate values on the fly using the yield keyword.
+
+- Why use generators?
+    1. Saves memory.
+    2. Faster execution.
+    3. Stops automativally when done.
+
+- Example:
+    def conut(n):
+        i = 1
+        while i <= n:
+            yield i
+            i += 1
+    
+    for num in count(10):
+        print(num)
+    
+    output : 1 2 3 4 5 6 7 8 9 10
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ADVANCED TOPICS:
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+32. 
